@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; 
+  margin: 0;
+  padding: 0;
+}
+/* 내부 영역*/
+main {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 70%;
+  text-align: center;
+}
+
+.category-bar, .mode-bar {
+  display: flex;
+  justify-content: center;
+  background: #FFCA6C; 
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 80%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-btn, .mode-btn {
+  margin: 0 10px;
+  border: none;
+  background: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.category-btn.active, .mode-btn.active {
+  font-weight: bold;
+  color: white;
+}
+
+.content-box, .delete-box {
+  background: white; 
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 80%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 90%;
+  height: 80px;
+  resize: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-btn, .delete-btn, .edit-btn {
+  background: #BDBDBD;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.register-btn:hover, .delete-btn:hover, .edit-btn:hover {
+  background: #FFCA6C;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.footer button:hover {
+  background: #ddd;
+}
+

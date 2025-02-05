@@ -1,31 +1,14 @@
 import React from "react";
+import "../App.css";
 
 const Footer = () => {
     return (
-        <footer style={footerStyle}>
-            <p>© 2024. Made by <strong>Your Name</strong></p>
-            <p>📧 Contact: <a href="mailto:your.email@example.com" style={linkStyle}>your.email@example.com</a></p>
-            <p>🔗 GitHub: <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer" style={linkStyle}>github.com/yourgithub</a></p>
+        <footer className="under-footer">
+            <p>© 2025. Made by <strong>K-Digital Training 3기</strong></p>
+            <p>📧 Team member: 강윤석, 김도현, 김관영, 최찬희</p>
+            <p>🔗 GitHub: <a href="https://github.com/Ketose333/ReactKTraining" target="_blank" rel="noopener noreferrer" className="footer-link">React-Project</a></p>
         </footer>
     );
-};
-
-const footerStyle = {
-    position: "fixed",  // 화면 맨 아래 고정
-    bottom: 0,
-    left: 0,
-    width: "100%",
-    background: "#222",
-    color: "#fff",
-    textAlign: "center",
-    padding: "10px",
-    fontSize: "14px",
-    boxShadow: "0 -2px 5px rgba(0, 0, 0, 0.1)",
-};
-
-const linkStyle = {
-    color: "#4da6ff",
-    textDecoration: "none",
 };
 
 export default Footer;

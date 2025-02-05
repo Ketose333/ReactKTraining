@@ -8,7 +8,9 @@ const Post = () => {
     const [content, setContent] = useState("");
     const [posts, setPosts] = useState([]);
     const [mode, setMode] = useState("등록");
-    const [editingPost, setEditingPost] = useState(null); 
+    const [editingPost, setEditingPost] = useState(null);
+    const [soldPosts, setSoldPosts] = useState([]); 
+    const [message, setMessage] = useState(""); 
 
     const handleContentChange = (event) => {
         setContent(event.target.value);
@@ -20,19 +22,18 @@ const Post = () => {
             return;
         }
         if (mode === "등록") {
-            // 새 게시물 등록
             const newPost = { id: Date.now(), category, content };
             setPosts([...posts, newPost]);
+            setMessage("등록이 완료되었습니다."); 
         } else if (mode === "수정" && editingPost) {
-            // 게시물 수정
             const updatedPosts = posts.map((post) =>
                 post.id === editingPost.id ? { ...post, content, category } : post
             );
             setPosts(updatedPosts);
+            setMessage("수정이 완료되었습니다."); 
         }
-        setContent(""); // 입력란 초기화
-        setEditingPost(null); // 수정할 게시물 초기화
-
+        setContent(""); 
+        setEditingPost(null); 
         setMode("목록");
     };
 
@@ -41,10 +42,20 @@ const Post = () => {
     };
 
     const handleEdit = (post) => {
-        setEditingPost(post); // 수정할 게시물 설정
-        setCategory(post.category); // 수정할 카테고리 설정
-        setContent(post.content); // 수정할 내용 설정
-        setMode("수정"); // 수정 모드로 전환
+        setEditingPost(post); 
+        setCategory(post.category); 
+        setContent(post.content);
+        setMode("수정"); 
+        setMessage(""); 
+    };
+
+    const handlePurchase = (post) => {
+        if (soldPosts.includes(post.id)) {
+            setMessage("이미 팔린 상품입니다."); 
+        } else {
+            setSoldPosts([...soldPosts, post.id]); 
+            setMessage("팔린 상품입니다."); 
+        }
     };
 
     return (
@@ -79,13 +90,20 @@ const Post = () => {
                     <ul>
                         {posts.map((post) => (
                             <article key={post.id} className="post-item">
+                                {/* 메시지를 각 게시물 위에 표시 */}
+                                {message && (
+                                    <p style={{ color: 'red' }}>{soldPosts.includes(post.id) ? "이미 팔린 상품입니다." : message}</p>
+                                )}
                                 <p><strong>카테고리:</strong> {post.category}</p>
                                 <p><strong>내용:</strong> {post.content}</p>
-                                <button className="edit-btn" onClick={() => handleEdit(post)}>
+                                <button className="edit-btn" onClick={() => handleEdit(post)} disabled={soldPosts.includes(post.id)}>
                                     수정하기
                                 </button>
-                                <button className="delete-btn" onClick={() => handleDelete(post.id)}>
+                                <button className="delete-btn" onClick={() => handleDelete(post.id)} >
                                     삭제하기
+                                </button>
+                                <button className="purchase-btn" onClick={() => handlePurchase(post)} disabled={soldPosts.includes(post.id)}>
+                                    구매하기
                                 </button>
                             </article>
                         ))}

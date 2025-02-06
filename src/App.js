@@ -1,12 +1,14 @@
 import './App.css';
 import Post from './components/Post';
-import Footer from './components/Footer';  // ✅ Footer 추가
+import Footer from './components/Footer';  
 
 export default function App() {
   return (
-    <div className="App" style={{ paddingBottom: "60px" }}>
-      <Post />
-      <Footer />  {/* ✅ Footer 추가 */}
+    <div className="App">
+      <main>
+        <Post />
+        <Footer />
+      </main>
     </div>
   );
 }

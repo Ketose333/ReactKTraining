@@ -49,7 +49,7 @@ const Post = () => {
                 return;
             }
         if (mode === "등록") {
-            const newPost = { id: null, category, title, price, content, image };
+            const newPost = { id: Date.now(), category, title, price, content, image };
             setPosts([...posts, newPost]);
             setMessage("등록된 상품");
         } else if (mode === "수정" && editingPost) {
@@ -85,7 +85,7 @@ const Post = () => {
             setMessage("판매된 상품");
         } else {
             setSoldPosts([...soldPosts, post.id]);
-            setMessage("팔린 상품입니다.");
+            setMessage("등록된 상품");
         }
     };
 

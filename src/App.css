@@ -1,10 +1,10 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
-/* 내부 영역*/
+
 main {
   background-color: white;
   margin: 20px auto;
@@ -18,12 +18,13 @@ main {
 .logo {
   width: 80px;
   height: 80px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
+
 header {
-  display: flex; 
-  align-items: center;  
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-right: 70px;
 }
 
@@ -32,6 +33,7 @@ h2 {
   margin-bottom: 20px;
   text-align: center;
 }
+
 h3 {
   font-size: 1.0em;
   margin-bottom: 20px;
@@ -42,25 +44,27 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-p{
+
+p {
   margin: 5px;
 }
 
-input{
+input {
   width: 92%;
   height: 35px;
   border-radius: 4px;
   border: 1px solid #ccc;
   margin: 5px;
   line-height: 37px;
-  padding-left: 10px; 
+  padding-left: 10px;
 }
-.preview-image,.post-image{
+
+.preview-image,
+.post-image {
   align-items: center;
   width: 100px;
   height: 100px;
 }
-
 
 .post-item {
   background-color: white;
@@ -73,25 +77,27 @@ input{
   width: 80%;
   max-width: 70%;
 }
+
 .post-group {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 20px;
   gap: 100px;
 }
+
 .post-buttons {
   display: flex;
-  justify-content: center; 
-  gap: 10px; 
-  margin-top: 10px; 
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-
-.category-bar, .mode-bar {
+.category-bar,
+.mode-bar {
   display: flex;
   justify-content: center;
-  background: #FFCA6C; 
+  background: #FFCA6C;
   padding: 10px;
   border-radius: 5px;
   margin: 20px auto;
@@ -100,7 +106,8 @@ input{
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.category-btn, .mode-btn {
+.category-btn,
+.mode-btn {
   margin: 0 10px;
   border: none;
   background: none;
@@ -110,13 +117,15 @@ input{
   transition: 0.3s;
 }
 
-.category-btn.active, .mode-btn.active {
+.category-btn.active,
+.mode-btn.active {
   font-weight: bold;
   color: white;
 }
 
-.content-box, .delete-box {
-  background: white; 
+.content-box,
+.delete-box {
+  background: white;
   padding: 10px;
   border-radius: 5px;
   display: flex;
@@ -126,7 +135,7 @@ input{
   width: 70%;
   max-width: 80%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  
+
 }
 
 textarea {
@@ -139,8 +148,16 @@ textarea {
   margin: 5px;
 }
 
-.register-btn, .delete-btn, .edit-btn, .purchase-btn {
-  background: #BDBDBD;
+input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #666;
+}
+
+.register-btn,
+.delete-btn,
+.edit-btn,
+.purchase-btn {
+  background: #ccc;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -152,15 +169,22 @@ textarea {
   margin-right: 20px;
   margin-left: 20px;
 }
-.edit-btn:disabled, .purchase-btn:disabled {
+
+.edit-btn:disabled,
+.purchase-btn:disabled {
   background-color: white;
   cursor: default;
 }
-.edit-btn:disabled:hover, .purchase-btn:disabled:hover {
-  background-color: white
+
+.edit-btn:disabled:hover,
+.purchase-btn:disabled:hover {
+  background-color: white;
 }
 
-.register-btn:hover, .delete-btn:hover, .edit-btn:hover, .purchase-btn:hover {
+.register-btn:hover,
+.delete-btn:hover,
+.edit-btn:hover,
+.purchase-btn:hover {
   background: #FFCA6C;
 }
 
@@ -184,7 +208,8 @@ textarea {
 .footer button:hover {
   background: #ddd;
 }
-.under-footer{
+
+.under-footer {
   background-color: #FFCA6C;
   border-radius: 10px;
   margin: 0;
@@ -192,15 +217,14 @@ textarea {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;    
+  justify-content: center;
+  align-items: center;
 }
+
 .footer-link {
-  color: #000000 
+  color: #000000;
 }
+
 .footer-link:hover {
-  color: white; 
+  color: white;
 }
-
-
-
